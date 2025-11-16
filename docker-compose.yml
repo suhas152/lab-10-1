@@ -1,5 +1,5 @@
 services:
-  mysqldb:
+  mysql-service:
     image: mysql:8
     container_name: mysql-service
     environment:
@@ -18,7 +18,7 @@ services:
     ports:
       - "2026:2000"
     depends_on:
-      - mysqldb
+      - mysql-service
     restart: on-failure
     networks:
       - springboot-mysql-net
