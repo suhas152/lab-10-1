@@ -5,6 +5,8 @@ services:
     environment:
       MYSQL_ROOT_PASSWORD: root
       MYSQL_DATABASE: klustudentdb
+      MYSQL_ROOT_HOST: "%"
+
     ports:
       - "3307:3306"
     volumes:
